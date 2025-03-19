@@ -1,16 +1,19 @@
 const { defineConfig } = require('cypress');
-require('dotenv').config(); // Load environment variables
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://qauto.forstudy.space/',
+    baseUrl: process.env.BASE_URL,
     env: {
-      userEmail: process.env.CYPRESS_userEmail,
-      userPassword: process.env.CYPRESS_userPassword,
+      userEmail: process.env.USER_EMAIL,
+      userPassword: process.env.USER_PASSWORD,
     },
     setupNodeEvents(on, config) {
+      return config;
     },
-    defaultCommandTimeout: 10000, 
+    defaultCommandTimeout: 10000,
     requestTimeout: 15000,
     responseTimeout: 15000,
     pageLoadTimeout: 60000,
@@ -23,6 +26,7 @@ module.exports = defineConfig({
     json: true
   }
 });
+
 
 
 

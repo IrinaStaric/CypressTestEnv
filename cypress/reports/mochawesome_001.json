@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-03-19T16:12:28.055Z",
+    "end": "2025-03-19T16:12:28.345Z",
+    "duration": 290,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4bdd7144-08e9-41f6-ad2f-a93aeb3807eb",
+      "title": "",
+      "fullFile": "cypress/e2e/registration_spec.cy.js",
+      "file": "cypress/e2e/registration_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "495db636-14c5-44a8-82ad-5c3851390fc2",
+          "title": "User Registration and Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register a new user successfully",
+              "fullTitle": "User Registration and Login should register a new user successfully",
+              "timedOut": null,
+              "duration": 123,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.register(userEmail, userPassword);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/register\n\nWe failed looking for this file at the path:\n\n/Users/irinastaric/Documents/CypressTestEnv/register\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/register\n\nWe failed looking for this file at the path:\n\n/Users/irinastaric/Documents/CypressTestEnv/register\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at <unknown> (http://localhost:52636/__cypress/runner/cypress_runner.js:132351:76)\n    at visitFailedByErr (http://localhost:52636/__cypress/runner/cypress_runner.js:131757:12)\n    at <unknown> (http://localhost:52636/__cypress/runner/cypress_runner.js:132334:13)\n    at tryCatcher (http://localhost:52636/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52636/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:52636/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:52636/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:52636/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:52636/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:52636/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:52636/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:52636/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypresstestenv/./cypress/support/commands.js:3:5)\n    at wrapped (http://localhost:52636/__cypress/runner/cypress_runner.js:138854:43)",
+                "diff": null
+              },
+              "uuid": "13fd7b13-82e3-4137-b734-e75a25d590c5",
+              "parentUUID": "495db636-14c5-44a8-82ad-5c3851390fc2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should log in with existing user credentials",
+              "fullTitle": "User Registration and Login should log in with existing user credentials",
+              "timedOut": null,
+              "duration": 142,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(userEmail, userPassword);\n// Verify successful login\ncy.url().should('include', '/dashboard');\ncy.get('h1').should('contain', 'Dashboard');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/login\n\nWe failed looking for this file at the path:\n\n/Users/irinastaric/Documents/CypressTestEnv/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/login\n\nWe failed looking for this file at the path:\n\n/Users/irinastaric/Documents/CypressTestEnv/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n    at <unknown> (http://localhost:52636/__cypress/runner/cypress_runner.js:132351:76)\n    at visitFailedByErr (http://localhost:52636/__cypress/runner/cypress_runner.js:131757:12)\n    at <unknown> (http://localhost:52636/__cypress/runner/cypress_runner.js:132334:13)\n    at tryCatcher (http://localhost:52636/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52636/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:52636/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:52636/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:52636/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:52636/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:52636/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:52636/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:52636/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Object.eval [as setup] (webpack://cypresstestenv/./cypress/support/commands.js:12:7)\n    at Context.<anonymous> (http://localhost:52636/__cypress/runner/cypress_runner.js:133868:38)\n    at getRet (http://localhost:52636/__cypress/runner/cypress_runner.js:118349:20)\n    at tryCatcher (http://localhost:52636/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:52636/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:52636/__cypress/runner/cypress_runner.js:118360:66)\n    at Context.then (http://localhost:52636/__cypress/runner/cypress_runner.js:118611:21)\n    at wrapped (http://localhost:52636/__cypress/runner/cypress_runner.js:138862:19)",
+                "diff": null
+              },
+              "uuid": "0ac84ca7-9d5f-408e-8f07-7c419ea593a0",
+              "parentUUID": "495db636-14c5-44a8-82ad-5c3851390fc2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "13fd7b13-82e3-4137-b734-e75a25d590c5",
+            "0ac84ca7-9d5f-408e-8f07-7c419ea593a0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 265,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

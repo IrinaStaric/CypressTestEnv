@@ -1,6 +1,7 @@
 {
-    "baseUrl": "https://qauto.forstudy.space",
-    "userEmail": "user1@example.com",
+    "baseUrl": "https://qauto.forstudy.space/",
+    "userEmail": "user10@example.com",
     "userPassword": "Secure1234"
   }
+  
   
